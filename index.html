@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>P2: Grammatik</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/introjs.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md" style="padding-left: 50px;">
+        <div class="container-fluid"><a class="navbar-brand" href=""><strong>Projektaufgabe P2: Grammatik</strong><br></a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="dokumentation.html" data-intro="Hier geht es zu der Dokumentation.">Dokumentation</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="introJs().start()">Tour</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="ColumnLeft">
+                    <div class="grey-box" data-intro="Alle wichtigen Informationen zu der Grammatik befinden sich in der Box auf der linken Seite.">
+                        <p class="text-in-box"><strong>Grammatik:&nbsp;</strong><br>G ={V, Σ, R, S}<br><br><strong>Nichtterminalvariablen:&nbsp;</strong><br>V = {A, O, Z}<br><br><strong>Terminalvariablen:&nbsp;</strong><br>Σ = { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | + | - | * | / }<br><br><strong>Startvariable:</strong><br>S={A}<br></p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th><strong>Regeln:</strong><br></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="Regel1">
+                                        <td style="border-style: solid;"><strong>Nr. 1</strong></td>
+                                        <td style="border-style: solid;">A&nbsp; →&nbsp; (A)&nbsp; |&nbsp; A O A&nbsp; |&nbsp; Z</td>
+                                    </tr>
+                                    <tr id="Regel2">
+                                        <td style="border-style: hidden;"><strong>Nr. 2</strong></td>
+                                        <td style="border-style: hidden;">O&nbsp;&nbsp;<strong>→</strong>&nbsp; + | - | * | /</td>
+                                    </tr>
+                                    <tr id="Regel3">
+                                        <td style="border-style: hidden;"><strong>Nr. 3</strong></td>
+                                        <td style="border-style: hidden;">Z&nbsp;&nbsp;<strong>→</strong>&nbsp; 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="ColumnRight">
+                    <div id="Eingabe" class="eingabe-box">
+                        <h3>Erstelle einen korrekten Ausdruck</h3><select id="select" data-intro="Wähle eine Länge aus: kurz (3 bis 5 Zeichen), mittellang (15 Zeichen) oder lang (25 Zeichen). Alternativ kann auch eine beliebige Länge gewählt werden.">
+                            <option value="0" selected="">beliebige Länge</option>
+                            <option value="1">kurz</option>
+                            <option value="2">mittel</option>
+                            <option value="3">lang</option>
+                        </select><button class="button-ausdruck" type="button" data-intro="Mit diesem Button wird entsprechend der Grammatik ein zufälliger, arithmetischer Ausdruck erstellt." onclick="getItem()">Ausdruck erstellen</button><button class="button-reset" type="button" data-intro="Mit diesem Button wird die komplette Anwendung in ihren Ausgangszustand zurückgesetzt." onclick="location.reload()">Anwendung resetten</button><br><output id="expression"></output>
+                    </div>
+                    <div id="Ausgabe" class="ausgabe-box">
+                        <h3 class="heading-animation"><i id="playbutton" class="far fa-play-circle" data-intro="Mit einem Klick auf den Play-Button werden die einzelnen Schritte der Ableitung angezeigt." onclick="showAnimation()"></i>
+
+Visualisierung der Schritte</h3><p class="text" id="animation"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer">Jessica Charzynski | Matrikelnummer: 923010 | Theoretische Informatik (Sommersemester 2022)</p>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grammatik.js"></script>
+    <script src="assets/js/intro.min.js"></script>
+</body>
+
+</html>
