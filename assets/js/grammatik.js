@@ -596,4 +596,6 @@ function showAnimation(){
 } // Ende showAnimation
 
 // Funktion des Reset-Buttons
-location.reload(forcedReload);
+function reloadThePage(){
+    window.location.reload();
+} 
