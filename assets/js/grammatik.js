@@ -58,6 +58,19 @@ function getItem(){
 }
 
 //---Visualisierung der Schritte---//
+ 
+function display () {
+  var inhalt_div = document.getElementById("animation").innerHTML;
+  document.getElementById("animation").innerHTML=inhalt_div+step[i];
+  i++;
+  if (i == step.length){
+  clearInterval(aktiv);
+  }
+} 
+
+// globale Variablen für die Funktion showAnimation
+var aktiv;
+var i = 0;     
 
 function showAnimation(){
     
@@ -68,222 +81,247 @@ function showAnimation(){
     //---kurze Ausdrücke---//
     
     case "( 0 )":
-    var step0 = "Start:  A <br>";
-    var step1 = "Regel 1:  A → ( A ) <br>";
-    var step2 = "Regel 1:  ( A ) → ( Z ) <br>";
-    var step3 = "Regel 3:  ( Z ) → ( 0 ) <br>";
-    var stepsAll = step0 + step1 + step2 + step3;
-    document.getElementById("animation").innerHTML = stepsAll;
-    break; 
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[4] = "Regel 3: ( Z ) → ( 0 ) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);     
+    break;
             
     case "( 2 )":
-    var step0 = "Start:  A <br>";
-    var step1 = "Regel 1:  A → ( A ) <br>";
-    var step2 = "Regel 1:  ( A ) → ( Z ) <br>";
-    var step3 = "Regel 3:  ( Z ) → ( 2 ) <br>";
-    var stepsAll = step0 + step1 + step2 + step3;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[4] = "Regel 3: ( Z ) → ( 2 ) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);    
     break; 
             
     case "( 4 )":
-    var step0 = "Start:  A <br>";
-    var step1 = "Regel 1:  A → ( A ) <br>";
-    var step2 = "Regel 1:  ( A ) → ( Z ) <br>";
-    var step3 = "Regel 3:  ( Z ) → ( 4 ) <br>";
-    var stepsAll = step0 + step1 + step2 + step3;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[4] = "Regel 3: ( Z ) → ( 4 ) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);    
     break;
     
     case "( 6 )":
-    var step0 = "Start:  A <br>";
-    var step1 = "Regel 1:  A → ( A ) <br>";
-    var step2 = "Regel 1:  ( A ) → ( Z ) <br>";
-    var step3 = "Regel 3:  ( Z ) → ( 6 ) <br>";
-    var stepsAll = step0 + step1 + step2 + step3;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[4] = "Regel 3: ( Z ) → ( 6 ) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);  
     break; 
     
     case "( 8 )":
-    var step0 = "Start:  A <br>";
-    var step1 = "Regel 1:  A → ( A ) <br>";
-    var step2 = "Regel 1:  ( A ) → ( Z ) <br>";
-    var step3 = "Regel 3:  ( Z ) → ( 8 ) <br>";
-    var stepsAll = step0 + step1 + step2 + step3;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
+    step[4] = "Regel 3: ( Z ) → ( 8 ) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);  
     break;
-            
+
     case "1 + 1":
-    var step0 = "Start:  A <br>";
-    var step1 = "Regel 1:  A → A O A <br>";
-    var step2 = "Regel 1:  A O A → Z O A <br>"
-    var step3 = "Regel 2:  Z O A → Z + A <br>"
-    var step4 = "Regel 1:  Z + A → Z + Z <br>"
-    var step5 = "Regel 3:  Z + Z → 1 + Z <br>"
-    var step6 = "Regel 3:  1 + Z → 1 + 1 <br>"
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → Z O A <br>"
+    step[3] = "Regel 2: Z O A → Z + A <br>"
+    step[4] = "Regel 1: Z + A → Z + Z <br>"
+    step[5] = "Regel 3: Z + Z → 1 + Z <br>"
+    step[6] = "Regel 3: 1 + Z → 1 + 1 <br>"
+    i = 0;
+    aktiv = setInterval(display, 500);
     break;
-    
+
     case "6 + 5":
-    var step0 = "Start:  A <br>";
-    var step1 = "Regel 1:  A → A O A <br>";
-    var step2 = "Regel 1:  A O A → Z O A <br>"
-    var step3 = "Regel 2:  Z O A → Z + A <br>"
-    var step4 = "Regel 1:  Z + A → Z + Z <br>"
-    var step5 = "Regel 3:  Z + Z → 6 + Z <br>"
-    var step6 = "Regel 3:  6 + Z → 6 + 5 <br>"
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1:  A → A O A <br>";
+    step[2] = "Regel 1:  A O A → Z O A <br>"
+    step[3] = "Regel 2:  Z O A → Z + A <br>"
+    step[4] = "Regel 1:  Z + A → Z + Z <br>"
+    step[5] = "Regel 3:  Z + Z → 6 + Z <br>"
+    step[6] = "Regel 3:  6 + Z → 6 + 5 <br>"
+    i = 0;
+    aktiv = setInterval(display, 500);
     break;
-    
+
     case "9 - 2":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → Z O A <br>"
-    var step3 = "Regel 2: Z O A → Z - A <br>"
-    var step4 = "Regel 1: Z - A → Z - Z <br>"
-    var step5 = "Regel 3: Z - Z → 9 - Z <br>"
-    var step6 = "Regel 3: 9 - Z → 9 - 2 <br>"
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6;
-    document.getElementById("animation").innerHTML = stepsAll;
-    break;
-    
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → Z O A <br>"
+    step[3] = "Regel 2: Z O A → Z - A <br>"
+    step[4] = "Regel 1: Z - A → Z - Z <br>"
+    step[5] = "Regel 3: Z - Z → 9 - Z <br>"
+    step[6] = "Regel 3: 9 - Z → 9 - 2 <br>"
+    i = 0;
+    aktiv = setInterval(display, 500); 
+    break;   
+
     case "8 - 7":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → Z O A <br>"
-    var step3 = "Regel 2: Z O A → Z - A <br>"
-    var step4 = "Regel 1: Z - A → Z - Z <br>"
-    var step5 = "Regel 3: Z - Z → 8 - Z <br>"
-    var step6 = "Regel 3: 8 - Z → 8 - 7 <br>"
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → Z O A <br>"
+    step[3] = "Regel 2: Z O A → Z - A <br>"
+    step[4] = "Regel 1: Z - A → Z - Z <br>"
+    step[5] = "Regel 3: Z - Z → 8 - Z <br>"
+    step[6] = "Regel 3: 8 - Z → 8 - 7 <br>"
+    i = 0;
+    aktiv = setInterval(display, 500); 
     break;
-    
+
     case "4 * 4":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → Z O A <br>"
-    var step3 = "Regel 2: Z O A → Z * A <br>"
-    var step4 = "Regel 1: Z * A → Z * Z <br>"
-    var step5 = "Regel 3: Z * Z → 4 * Z <br>"
-    var step6 = "Regel 3: 4 * Z → 4 * 4 <br>"
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6;
-    document.getElementById("animation").innerHTML = stepsAll;
-    break;
-            
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → Z O A <br>"
+    step[3] = "Regel 2: Z O A → Z * A <br>"
+    step[4] = "Regel 1: Z * A → Z * Z <br>"
+    step[5] = "Regel 3: Z * Z → 4 * Z <br>"
+    step[6] = "Regel 3: 4 * Z → 4 * 4 <br>"
+    i = 0;
+    aktiv = setInterval(display, 500);
+    break;  
+
     case "9 / 3":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → Z O A <br>"
-    var step3 = "Regel 2: Z O A → Z / A <br>"
-    var step4 = "Regel 1: Z / A → Z / Z <br>"
-    var step5 = "Regel 3: Z / Z → 9 / Z <br>"
-    var step6 = "Regel 3: 9 / Z → 9 / 3 <br>"
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → Z O A <br>"
+    step[3] = "Regel 2: Z O A → Z / A <br>"
+    step[4] = "Regel 1: Z / A → Z / Z <br>"
+    step[5] = "Regel 3: Z / Z → 9 / Z <br>"
+    step[6] = "Regel 3: 9 / Z → 9 / 3 <br>"
+    i = 0;
+    aktiv = setInterval(display, 500);   
     break;
-    
+
     case "( 7 * 3 )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → (A) <br>";
-    var step2 = "Regel 1: (A) → (A O A) <br>";
-    var step3 = "Regel 1: (A O A) → (Z O A) <br>";
-    var step4 = "Regel 2: (Z O A) → (Z * A) <br>";
-    var step5 = "Regel 1: (Z * A) → (Z * Z) <br>";
-    var step6 = "Regel 3: (Z * Z) → (7 * Z) <br>";
-    var step7 = "Regel 3: (7 * Z) → (7 * 3) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6 + step7;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → (A) <br>";
+    step[2] = "Regel 1: (A) → (A O A) <br>";
+    step[3] = "Regel 1: (A O A) → (Z O A) <br>";
+    step[4] = "Regel 2: (Z O A) → (Z * A) <br>";
+    step[5] = "Regel 1: (Z * A) → (Z * Z) <br>";
+    step[6] = "Regel 3: (Z * Z) → (7 * Z) <br>";
+    step[7] = "Regel 3: (7 * Z) → (7 * 3) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);    
     break;
-    
+
     case "( 5 - 2 )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → (A) <br>";
-    var step2 = "Regel 1: (A) → (A O A) <br>";
-    var step3 = "Regel 1: (A O A) → (Z O A) <br>";
-    var step4 = "Regel 2: (Z O A) → (Z - A) <br>";
-    var step5 = "Regel 1: (Z - A) → (Z - Z) <br>";
-    var step6 = "Regel 3: (Z - Z) → (5 - Z) <br>";
-    var step7 = "Regel 3: (5 - Z) → (5 - 2) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6 + step7;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → (A) <br>";
+    step[2] = "Regel 1: (A) → (A O A) <br>";
+    step[3] = "Regel 1: (A O A) → (Z O A) <br>";
+    step[4] = "Regel 2: (Z O A) → (Z - A) <br>";
+    step[5] = "Regel 1: (Z - A) → (Z - Z) <br>";
+    step[6] = "Regel 3: (Z - Z) → (5 - Z) <br>";
+    step[7] = "Regel 3: (5 - Z) → (5 - 2) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500); 
     break;
-            
+
     case "( 8 ) / 4":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → (A) O A <br>";
-    var step3 = "Regel 1: (A) O A → (Z) O A <br>";
-    var step4 = "Regel 2: (Z) O A → (Z) / A <br>";
-    var step5 = "Regel 1: (Z) / A → (Z) / Z <br>";
-    var step6 = "Regel 3: (Z) / Z → (8) / Z <br>";
-    var step7 = "Regel 3: (8) / Z → (8) / 4 <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6 + step7;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → (A) O A <br>";
+    step[3] = "Regel 1: (A) O A → (Z) O A <br>";
+    step[4] = "Regel 2: (Z) O A → (Z) / A <br>";
+    step[5] = "Regel 1: (Z) / A → (Z) / Z <br>";
+    step[6] = "Regel 3: (Z) / Z → (8) / Z <br>";
+    step[7] = "Regel 3: (8) / Z → (8) / 4 <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);   
     break;
-    
+
     case "( 0 ) + 1":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → (A) O A <br>";
-    var step3 = "Regel 1: (A) O A → (Z) O A <br>";
-    var step4 = "Regel 2: (Z) O A → (Z) + A <br>";
-    var step5 = "Regel 1: (Z) + A → (Z) + Z <br>";
-    var step6 = "Regel 3: (Z) + Z → (0) + Z <br>";
-    var step7 = "Regel 3: (0) + Z → (0) + 1 <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6 + step7;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → (A) O A <br>";
+    step[3] = "Regel 1: (A) O A → (Z) O A <br>";
+    step[4] = "Regel 2: (Z) O A → (Z) + A <br>";
+    step[5] = "Regel 1: (Z) + A → (Z) + Z <br>";
+    step[6] = "Regel 3: (Z) + Z → (0) + Z <br>";
+    step[7] = "Regel 3: (0) + Z → (0) + 1 <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);    
     break;     
     
     case "( ( 1 ) )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → ( A ) <br>";
-    var step2 = "Regel 1: ( A ) → (( A )) <br>";
-    var step3 = "Regel 1: (( A )) → (( Z )) <br>";
-    var step4 = "Regel 3: (( Z )) → (( 1 )) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4;
-    document.getElementById("animation").innerHTML = stepsAll;
-    break;
-            
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → (( A )) <br>";
+    step[3] = "Regel 1: (( A )) → (( Z )) <br>";
+    step[4] = "Regel 3: (( Z )) → (( 1 )) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);
+    break;  
+
     case "( ( 3 ) )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → ( A ) <br>";
-    var step2 = "Regel 1: ( A ) → (( A )) <br>";
-    var step3 = "Regel 1: (( A )) → (( Z )) <br>";
-    var step4 = "Regel 3: (( Z )) → (( 3 )) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → (( A )) <br>";
+    step[3] = "Regel 1: (( A )) → (( Z )) <br>";
+    step[4] = "Regel 3: (( Z )) → (( 3 )) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);
     break;
-    
+
     case "( ( 5 ) )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → ( A ) <br>";
-    var step2 = "Regel 1: ( A ) → (( A )) <br>";
-    var step3 = "Regel 1: (( A )) → (( Z )) <br>";
-    var step4 = "Regel 3: (( Z )) → (( 5 )) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → (( A )) <br>";
+    step[3] = "Regel 1: (( A )) → (( Z )) <br>";
+    step[4] = "Regel 3: (( Z )) → (( 5 )) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);
     break;
     
     case "( ( 7 ) )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → ( A ) <br>";
-    var step2 = "Regel 1: ( A ) → (( A )) <br>";
-    var step3 = "Regel 1: (( A )) → (( Z )) <br>";
-    var step4 = "Regel 3: (( Z )) → (( 7 )) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → (( A )) <br>";
+    step[3] = "Regel 1: (( A )) → (( Z )) <br>";
+    step[4] = "Regel 3: (( Z )) → (( 7 )) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);
     break;
-            
+
     case "( ( 9 ) )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → ( A ) <br>";
-    var step2 = "Regel 1: ( A ) → (( A )) <br>";
-    var step3 = "Regel 1: (( A )) → (( Z )) <br>";
-    var step4 = "Regel 3: (( Z )) → (( 3 )) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → ( A ) <br>";
+    step[2] = "Regel 1: ( A ) → (( A )) <br>";
+    step[3] = "Regel 1: (( A )) → (( Z )) <br>";
+    step[4] = "Regel 3: (( Z )) → (( 9 )) <br>";
+    i = 0;
+    aktiv = setInterval(display, 500);
     break;
             
     //---mittellange Ausdrücke---//
