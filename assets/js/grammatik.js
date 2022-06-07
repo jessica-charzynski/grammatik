@@ -59,7 +59,7 @@ function getItem(){
 
 //---Visualisierung der Schritte---//
  
-function display () {
+function display(){
   var inhalt_div = document.getElementById("animation").innerHTML;
   document.getElementById("animation").innerHTML=inhalt_div+step[i];
   i++;
