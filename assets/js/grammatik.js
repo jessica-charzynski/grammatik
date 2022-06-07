@@ -307,52 +307,52 @@ function showAnimation(){
     //---mittellange Ausdrücke---//
     
     case "( 8 ) * 3 + ( 2 ) - ( ( 1 ) )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → A O A O A <br>";
-    var step3 = "Regel 1: A O A O A → A O A O A O A <br>";
-    var step4 = "Regel 1: A O A O A O A → (A) O A O A O A <br>";
-    var step5 = "Regel 1: (A) O A O A O A → (A) O A O (A) O A <br>";
-    var step6 = "Regel 1: (A) O A O (A) O A → (A) O A O (A) O (A) <br>";  
-    var step7 = "Regel 1: (A) O A O (A) O (A) → (A) O A O (A) O ((A)) <br>";
-    var step8 = "Regel 1: (A) O A O (A) O ((A)) → (Z) O A O (A) O ((A)) <br>";
-    var step9 = "Regel 2: (Z) O A O (A) O ((A)) → (Z) * A O (A) O ((A)) <br>";
-    var step10 = "Regel 1: (Z) * A O (A) O ((A)) → (Z) * Z O (A) O ((A)) <br>";
-    var step11 = "Regel 2: (Z) * Z O (A) O ((A)) → (Z) * Z + (A) O ((A)) <br>";
-    var step12 = "Regel 1: (Z) * Z + (A) O ((A)) → (Z) * Z + (Z) O ((A)) <br>";
-    var step13 = "Regel 2: (Z) * Z + (Z) O ((A)) → (Z) * Z + (Z) - ((A)) <br>";
-    var step14 = "Regel 1: (Z) * Z + (Z) - ((A)) → (Z) * Z + (Z) - ((Z)) <br>";
-    var step15 = "Regel 3: (Z) * Z + (Z) - ((Z)) → (8) * Z + (Z) - ((Z)) <br>";
-    var step16 = "Regel 3: (8) * Z + (Z) - ((Z)) → (8) * 3 + (Z) - ((Z)) <br>";
-    var step17 = "Regel 3: (8) * 3 + (Z) - ((Z)) → (8) * 3 + (2) - ((Z)) <br>";
-    var step18 = "Regel 3: (8) * 3 + (2) - ((Z)) → (8) * 3 + (2) - ((1)) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6 + step7 + step8 + step9 + step10 + step11 + step12 + step13 + step14 + step15 + step16 + step17 + step18;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → A O A O A <br>";
+    step[3] = "Regel 1: A O A O A → A O A O A O A <br>";
+    step[4] = "Regel 1: A O A O A O A → (A) O A O A O A <br>";
+    step[5] = "Regel 1: (A) O A O A O A → (A) O A O (A) O A <br>";
+    step[6] = "Regel 1: (A) O A O (A) O A → (A) O A O (A) O (A) <br>";  
+    step[7] = "Regel 1: (A) O A O (A) O (A) → (A) O A O (A) O ((A)) <br>";
+    step[8] = "Regel 1: (A) O A O (A) O ((A)) → (Z) O A O (A) O ((A)) <br>";
+    step[9] = "Regel 2: (Z) O A O (A) O ((A)) → (Z) * A O (A) O ((A)) <br>";
+    step[10] = "Regel 1: (Z) * A O (A) O ((A)) → (Z) * Z O (A) O ((A)) <br>";
+    step[11] = "Regel 2: (Z) * Z O (A) O ((A)) → (Z) * Z + (A) O ((A)) <br>";
+    step[12] = "Regel 1: (Z) * Z + (A) O ((A)) → (Z) * Z + (Z) O ((A)) <br>";
+    step[13] = "Regel 2: (Z) * Z + (Z) O ((A)) → (Z) * Z + (Z) - ((A)) <br>";
+    step[14] = "Regel 1: (Z) * Z + (Z) - ((A)) → (Z) * Z + (Z) - ((Z)) <br>";
+    step[15] = "Regel 3: (Z) * Z + (Z) - ((Z)) → (8) * Z + (Z) - ((Z)) <br>";
+    step[16] = "Regel 3: (8) * Z + (Z) - ((Z)) → (8) * 3 + (Z) - ((Z)) <br>";
+    step[17] = "Regel 3: (8) * 3 + (Z) - ((Z)) → (8) * 3 + (2) - ((Z)) <br>";
+    step[18] = "Regel 3: (8) * 3 + (2) - ((Z)) → (8) * 3 + (2) - ((1)) <br>";
+    aktiv = setInterval(display, 500);
     break;
             
     case "( 7 * 3 ) + ( 3 * 3 ) + ( 2 )":
-    var step0 = "Start: A <br>";
-    var step1 = "Regel 1: A → A O A <br>";
-    var step2 = "Regel 1: A O A → A O A O A <br>";
-    var step3 = "Regel 1: A O A O A → (A O A) O A O A <br>";
-    var step4 = "Regel 1: (A O A) O A O A → (A O A) O (A O A) O A <br>";
-    var step5 = "Regel 1: (A O A) O (A O A) O A → (A O A) O (A O A) O (A) <br>";
-    var step6 = "Regel 1: (A O A) O (A O A) O (A) → (Z O A) O (A O A) O (A) <br>";
-    var step7 = "Regel 2: (Z O A) O (A O A) O (A) → (Z * A) O (A O A) O (A) <br>";
-    var step8 = "Regel 1: (Z * A) O (A O A) O (A) → (Z * Z) O (A O A) O (A) <br>";
-    var step9 = "Regel 2: (Z * Z) O (A O A) O (A) → (Z * Z) + (A O A) O (A) <br>";
-    var step10 = "Regel 1: (Z * Z) + (A O A) O (A) → (Z * Z) + (Z O A) O (A) <br>";
-    var step11 = "Regel 2: (Z * Z) + (Z O A) O (A) → (Z * Z) + (Z * A) O (A) <br>";
-    var step12 = "Regel 1: (Z * Z) + (Z * A) O (A) → (Z * Z) + (Z * Z) O (A) <br>";
-    var step13 = "Regel 2: (Z * Z) + (Z * Z) O (A) → (Z * Z) + (Z * Z) + (A) <br>";
-    var step14 = "Regel 1: (Z * Z) + (Z * Z) + (A) → (Z * Z) + (Z * Z) + (Z) <br>";
-    var step15 = "Regel 3: (Z * Z) + (Z * Z) + (Z) → (7 * Z) + (Z * Z) + (Z) <br>";
-    var step16 = "Regel 3: (7 * Z) + (Z * Z) + (Z) → (7 * 3) + (Z * Z) + (Z) <br>";
-    var step17 = "Regel 3: (7 * 3) + (Z * Z) + (Z) → (7 * 3) + (3 * Z) + (Z) <br>";
-    var step18 = "Regel 3: (7 * 3) + (3 * Z) + (Z) → (7 * 3) + (3 * 3) + (Z) <br>";
-    var step19 = "Regel 3: (7 * 3) + (3 * 3) + (Z) → (7 * 3) + (3 * 3) + (2) <br>";
-    var stepsAll = step0 + step1 + step2 + step3 + step4 + step5 + step6 + step7 + step8 + step9 + step10 + step11 + step12 + step13 + step14 + step15 + step16 + step17 + step18 + step19;
-    document.getElementById("animation").innerHTML = stepsAll;
+    step = new Array();
+    step[0] = "Start: A <br>";
+    step[1] = "Regel 1: A → A O A <br>";
+    step[2] = "Regel 1: A O A → A O A O A <br>";
+    step[3] = "Regel 1: A O A O A → (A O A) O A O A <br>";
+    step[4] = "Regel 1: (A O A) O A O A → (A O A) O (A O A) O A <br>";
+    step[5] = "Regel 1: (A O A) O (A O A) O A → (A O A) O (A O A) O (A) <br>";
+    step[6] = "Regel 1: (A O A) O (A O A) O (A) → (Z O A) O (A O A) O (A) <br>";
+    step[7] = "Regel 2: (Z O A) O (A O A) O (A) → (Z * A) O (A O A) O (A) <br>";
+    step[8] = "Regel 1: (Z * A) O (A O A) O (A) → (Z * Z) O (A O A) O (A) <br>";
+    step[9] = "Regel 2: (Z * Z) O (A O A) O (A) → (Z * Z) + (A O A) O (A) <br>";
+    step[10] = "Regel 1: (Z * Z) + (A O A) O (A) → (Z * Z) + (Z O A) O (A) <br>";
+    step[11] = "Regel 2: (Z * Z) + (Z O A) O (A) → (Z * Z) + (Z * A) O (A) <br>";
+    step[12] = "Regel 1: (Z * Z) + (Z * A) O (A) → (Z * Z) + (Z * Z) O (A) <br>";
+    step[13] = "Regel 2: (Z * Z) + (Z * Z) O (A) → (Z * Z) + (Z * Z) + (A) <br>";
+    step[14] = "Regel 1: (Z * Z) + (Z * Z) + (A) → (Z * Z) + (Z * Z) + (Z) <br>";
+    step[15] = "Regel 3: (Z * Z) + (Z * Z) + (Z) → (7 * Z) + (Z * Z) + (Z) <br>";
+    step[16] = "Regel 3: (7 * Z) + (Z * Z) + (Z) → (7 * 3) + (Z * Z) + (Z) <br>";
+    step[17] = "Regel 3: (7 * 3) + (Z * Z) + (Z) → (7 * 3) + (3 * Z) + (Z) <br>";
+    step[18] = "Regel 3: (7 * 3) + (3 * Z) + (Z) → (7 * 3) + (3 * 3) + (Z) <br>";
+    step[19] = "Regel 3: (7 * 3) + (3 * 3) + (Z) → (7 * 3) + (3 * 3) + (2) <br>";
+    aktiv = setInterval(display, 500);
     break;
             
     case "( 5 + 4 ) / ( 9 - 6 ) * ( 7 )":
@@ -616,4 +616,4 @@ function showAnimation(){
 // Funktion des Reset-Buttons
 function reloadThePage(){
     window.location.reload();
-} 
+}
