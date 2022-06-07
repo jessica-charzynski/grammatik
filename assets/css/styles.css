@@ -169,6 +169,7 @@ select {
 .dokumentation {
   margin-left: 60px;
   margin-right: 60px;
+  width: 1000px;
 }
 
 a {
