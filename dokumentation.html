@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ESA2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/introjs.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md" style="padding-left: 50px;">
+        <div class="container-fluid"><a class="navbar-brand" href=""><strong>Projektaufgabe P2: Grammatik</strong><br></a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">zur Webanwendung</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="dokumentation">
+        <h2>Dokumentation</h2>
+        <h5>Aufgabenstellung</h5>
+        <p>Erzeugen Sie mit Hilfe eine Grammatik zufällige, korrekte arithmetische Ausdrucke über&nbsp;einstellige,&nbsp;natürlichen Zahlen mit den Operanden "+,-,*,/" und beliebig geschachtelten runden Klammern.<br>Nutzen Sie die folgenden Abkürzungen: A = Ausdruck, O = Operator = + | - | * | / ,&nbsp;&nbsp;Z = Zahl/Ziffer = 0 | 1 |&nbsp; 2 | ... | 9.<br></p>
+        <h5>Fachliche Dokumentation</h5>
+        <p>Formal kann die Grammatik als 4-Tupel definiert werden:<br><strong>G ={V, Σ, R, S}</strong><br></p>
+        <ul>
+            <li>endlichen Menge an Nichtterminalvariablen V = {A,O,Z}</li>
+            <li>endliche Menge an Terminalvariablen Σ&nbsp;= {0|1|2|3|4|5|6|7|8|9|+|-|*|/}<br></li>
+            <li>Produktionsregeln R:<br>1) A → (A) | A O A | Z<br>2) O → +| - | * | /<br>3) Z → 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9<br></li>
+            <li>Startvariable S = {A}</li>
+        </ul>
+        <h5>Technische Dokumentation</h5>
+        <p>Das User Interface habe ich mithilfe der&nbsp;Entwicklungsanwendung&nbsp;<a href="https://bootstrapstudio.io/" target="_blank">Bootstrap Studio</a>&nbsp;gestaltet.&nbsp;<br>Mithilfe dem Tool <a href="https://introjs.com/" target="_blank">IntroJS</a> habe ich eine kleine Hilfe-Tour durch meine Anwendung eingebaut.<br><br>Für die zufällige Ausgabe der arithmetischen Ausdrucke habe ich nach Länge sortierte Arrays mit Beispielen erstellt, aus denen ein Ausdruck mithilfe der Funktion "getItem()" zufällig ausgewählt und ausgegeben wird.<br></p><script src="https://gist.github.com/jessica-charzynski/e7d259f298334dd371444dc308716c17.js"></script>
+        <p>Für die Visualisierung der Schritte dient die Funktion "showAnimation()", die mithilfe einer switch-case-Verzweigung den jeweiligen Ausdruck und seine Ableitungsschritte aufruft.&nbsp;Dabei greift sie auf die Funktion "display()" zu, wodurch die Schritte mithilfe eines Intervalls nacheinander angezeigt werden.</p><script src="https://gist.github.com/jessica-charzynski/cef1bc05891f07a7a803c9a416200b8d.js"></script>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grammatik.js"></script>
+    <script src="assets/js/intro.min.js"></script>
+</body>
+
+</html>
