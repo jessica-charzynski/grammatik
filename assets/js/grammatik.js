@@ -432,6 +432,7 @@ function showAnimation(){
     //---lange Ausdrücke---//
             
     case "( 9 + 8 + 7 ) / ( 3 + 2 + 1 ) * ( 6 + 5 + 4 ) - 0":
+    step = new Array();
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A <br> → A O A <br>";
     step[2] = "Regel 1: A O A <br> → A O A O A <br>";
