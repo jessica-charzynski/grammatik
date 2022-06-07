@@ -13,8 +13,8 @@ var arrayRandom = ["( 0 )", "( 2 )", "( 4 )", "( 6 )", "( 8 )",
                    "( 9 + 8 + 7 ) / ( 3 + 2 + 1 ) * ( 6 + 5 + 4 ) - 0",
                    "(( 5 )) * (( 4 )) - ( 9 / 3 ) + ( 7 + 1 + 2 )",
                    "(( 2 )) * (( 2 )) + ( 8 / 4 ) + ( 9 + 6 - 5 )",
-                   "(3) - (( 9 / 9 )) - (( 7 / 7 )) - (( 5 / 5 ))",
-                   "(8) - (( 2 * 2 )) + (( 5 - 3 )) - (( 9 - 6 ))"];
+                   "( 3 ) - (( 9 / 9 )) - (( 7 / 7 )) - (( 5 / 5 ))",
+                   "( 8 ) - (( 2 * 2 )) + (( 5 - 3 )) - (( 9 - 6 ))"];
 
 // 3 bis 5 Zeichen
 var arrayKurz = ["( 0 )", "( 2 )", "( 4 )", "( 6 )", "( 8 )",
@@ -33,8 +33,8 @@ var arrayMittel = ["( 8 ) * 3 + ( 2 ) - ( ( 1 ) )",
 var arrayLang = ["( 9 + 8 + 7 ) / ( 3 + 2 + 1 ) * ( 6 + 5 + 4 ) - 0",
                  "(( 5 )) * (( 4 )) - ( 9 / 3 ) + ( 7 + 1 + 2 )",
                  "(( 2 )) * (( 2 )) + ( 8 / 4 ) + ( 9 + 6 - 5 )",
-                 "(3) - (( 9 / 9 )) - (( 7 / 7 )) - (( 5 / 5 ))",
-                 "(8) - (( 2 * 2 )) + (( 5 - 3 )) - (( 9 - 6 ))"];
+                 "( 3 ) - (( 9 / 9 )) - (( 7 / 7 )) - (( 5 / 5 ))",
+                 "( 8 ) - (( 2 * 2 )) + (( 5 - 3 )) - (( 9 - 6 ))"];
 
 //---Funktion zur Ausgabe des zufälligen Ausdrucks---//
 
@@ -59,7 +59,7 @@ function getItem(){
 
 //---Visualisierung der Schritte---//
  
-function display(){
+function display() {
   var inhalt_div = document.getElementById("animation").innerHTML;
   document.getElementById("animation").innerHTML=inhalt_div+step[i];
   i++;
@@ -542,7 +542,7 @@ function showAnimation(){
     aktiv = setInterval(display, time);
     break;
             
-    case "(3) - (( 9 / 9 )) - (( 7 / 7 )) - (( 5 / 5 ))":
+    case "( 3 ) - (( 9 / 9 )) - (( 7 / 7 )) - (( 5 / 5 ))":
     step = new Array();
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A <br> → A O A <br>";
@@ -574,7 +574,7 @@ function showAnimation(){
     aktiv = setInterval(display, time);
     break;
             
-    case "(8) - (( 2 * 2 )) + (( 5 - 3 )) - (( 9 - 6 ))":
+    case "( 8 ) - (( 2 * 2 )) + (( 5 - 3 )) - (( 9 - 6 ))":
     step = new Array();
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A <br> → A O A <br>";
