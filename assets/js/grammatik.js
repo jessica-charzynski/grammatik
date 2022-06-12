@@ -86,8 +86,7 @@ function showAnimation(){
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A → ( A ) <br>";
     step[2] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[4] = "Regel 3: ( Z ) → ( 0 ) <br>";
+    step[3] = "Regel 3: ( Z ) → ( 0 ) <br>";
     aktiv = setInterval(display, time);     
     break;
             
@@ -96,8 +95,7 @@ function showAnimation(){
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A → ( A ) <br>";
     step[2] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[4] = "Regel 3: ( Z ) → ( 2 ) <br>";
+    step[3] = "Regel 3: ( Z ) → ( 2 ) <br>";
     aktiv = setInterval(display, time);    
     break; 
             
@@ -106,8 +104,7 @@ function showAnimation(){
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A → ( A ) <br>";
     step[2] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[4] = "Regel 3: ( Z ) → ( 4 ) <br>";
+    step[3] = "Regel 3: ( Z ) → ( 4 ) <br>";
     aktiv = setInterval(display, time);    
     break;
     
@@ -116,8 +113,7 @@ function showAnimation(){
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A → ( A ) <br>";
     step[2] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[4] = "Regel 3: ( Z ) → ( 6 ) <br>";
+    step[3] = "Regel 3: ( Z ) → ( 6 ) <br>";
     aktiv = setInterval(display, time);  
     break; 
     
@@ -126,8 +122,7 @@ function showAnimation(){
     step[0] = "Start: A <br>";
     step[1] = "Regel 1: A → ( A ) <br>";
     step[2] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[3] = "Regel 1: ( A ) → ( Z ) <br>";
-    step[4] = "Regel 3: ( Z ) → ( 8 ) <br>";
+    step[3] = "Regel 3: ( Z ) → ( 8 ) <br>";
     aktiv = setInterval(display, time);  
     break;
 
