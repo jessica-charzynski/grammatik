@@ -71,7 +71,7 @@ function display() {
 // globale Variablen für die Funktion showAnimation
 var aktiv;
 var i = 0;
-var time = 500;
+var time = 750;
 
 function showAnimation(){
     
