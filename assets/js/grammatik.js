@@ -464,7 +464,7 @@ function showAnimation(){
     step[33] = "Regel 3: (9 + Z + Z) / (Z + Z + Z) * (Z + Z + Z) - Z <br> → (9 + 8 + Z) / (Z + Z + Z) * (Z + Z + Z) - Z <br><br>";   
     step[34] = "Regel 3: (9 + 8 + Z) / (Z + Z + Z) * (Z + Z + Z) - Z <br> → (9 + 8 + 7) / (Z + Z + Z) * (Z + Z + Z) - Z <br><br>";        
     step[35] = "Regel 3: (9 + 8 + 7) / (Z + Z + Z) * (Z + Z + Z) - Z <br> → (9 + 8 + 7) / (3 + Z + Z) * (Z + Z + Z) - Z <br><br>";      
-    step[36] = "Regel 3: (9 + 8 + 7) / (3 + Z + Z) * (Z + Z + Z) - Z <br> → (9 + 8 + Z7 / (3 + 2 + Z) * (Z + Z + Z) - Z <br><br>";         
+    step[36] = "Regel 3: (9 + 8 + 7) / (3 + Z + Z) * (Z + Z + Z) - Z <br> → (9 + 8 + 7) / (3 + 2 + Z) * (Z + Z + Z) - Z <br><br>";         
     step[37] = "Regel 3: (9 + 8 + 7) / (3 + 2 + Z) * (Z + Z + Z) - Z <br> → (9 + 8 + 7) / (3 + 2 + 1) * (Z + Z + Z) - Z <br><br>";  
     step[38] = "Regel 3: (9 + 8 + 7) / (3 + 2 + 1) * (Z + Z + Z) - Z <br> → (9 + 8 + 7) / (3 + 2 + 1) * (6 + Z + Z) - Z <br><br>"; 
     step[39] = "Regel 3: (9 + 8 + 7) / (3 + 2 + 1) * (6 + Z + Z) - Z <br> → (9 + 8 + 7) / (3 + 2 + 1) * (6 + 5 + Z) - Z <br><br>";
