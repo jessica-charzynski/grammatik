@@ -519,12 +519,12 @@ function showAnimation(){
     step[9] = "Regel 2: ((A)) O (A) O (A) O (A) <br> → ((A)) * (A) O (A) O (A) <br><br>";
     step[10] = "Regel 1: ((A)) * (A) O (A) O (A) <br> → ((A)) * ((A)) O (A) O (A) <br><br>";
     step[11] = "Regel 2: ((A)) * ((A)) O (A) O (A) <br> → ((A)) * ((A)) - (A) O (A) <br><br>";
-    step[12] = "Regel 1: ((A)) * ((A)) + (A) O (A) <br> → ((A)) * ((A)) - (A O A) O (A) <br><br><br>";
+    step[12] = "Regel 1: ((A)) * ((A)) + (A) O (A) <br> → ((A)) * ((A)) - (A O A) O (A) <br><br>";
     step[13] = "Regel 2: ((A)) * ((A)) + (A O A) O (A) <br> → ((A)) * ((A)) - (A O A) + (A) <br><br>";
     step[14] = "Regel 1: ((A)) * ((A)) + (A O A) + (A) <br> → ((A)) * ((A)) - (A O A) + (A O A) <br><br>";
     step[15] = "Regel 1: ((A)) * ((A)) + (A O A) + (A O A) <br> → ((A)) * ((A)) - (A O A) + (A O A O A) <br><br>";
     step[16] = "Regel 2: ((A)) * ((A)) + (A O A) + (A O A O A) <br> → ((A)) * ((A)) + (A / A) + (A O A O A) <br><br>";
-    step[17] = "Regel 2: ((A)) * ((A)) + (A / A) + (A O A O A) <br> → ((A)) * ((A)) + (A / A) + (A + A O A) <br<br>>";
+    step[17] = "Regel 2: ((A)) * ((A)) + (A / A) + (A O A O A) <br> → ((A)) * ((A)) + (A / A) + (A + A O A) <br><br>";
     step[18] = "Regel 2: ((A)) * ((A)) + (A / A) + (A + A O A) <br> → ((A)) * ((A)) + (A / A) + (A + A O A) <br><br>";
     step[19] = "Regel 2: ((A)) * ((A)) + (A / A) + (A + A O A) <br> → ((A)) * ((A)) + (A / A) + (A + A - A) <br><br>";
     step[20] = "Regel 3: ((A)) * ((A)) + (A / A) + (A + A - A) <br> → ((2)) * ((A)) + (A / A) + (A + A - A) <br><br>";
